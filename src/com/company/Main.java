@@ -15,6 +15,11 @@ public class Main {
         studentOne.put("lastName", "Drummond");
         studentOne.put("course", "Spanish101");
 
+        // check your expectations:
+//        System.out.println(studentOne.get("firstName")); // what does this print?
+//        System.out.println(studentOne.get("lastName")); // what does this print?
+//        System.out.println(studentOne.get("course")); // what does this print?
+
         // studentTwo (firstName=Tina, lastName=Turner, course=English101
         HashMap<String, String> studentTwo = new HashMap<>();
         studentTwo.put("firstName", "Tina");
@@ -40,6 +45,14 @@ public class Main {
         studentList.add(studentThree);
         studentList.add(studentFour);
 
+        // check your expectations:
+//        System.out.println(studentList.get(0).get("firstName")); // what does this print?
+//        System.out.println(studentList.get(1).get("firstName")); // what does this print?
+//        System.out.println(studentList.get(2).get("firstName")); // what does this print?
+
+        // further expectation checking:
+//        System.out.println(studentList.get(3).get("course")); // what does this print?
+
         // now let's loop through all the students in our ArrayList printing their first names:
 //        for(int i = 0; i < studentList.size(); i++) {
 //            HashMap<String, String> currentStudent = studentList.get(i);
@@ -47,11 +60,9 @@ public class Main {
 //        }
 
         // alternate syntax using an enhanced for loop:
-        /*
-        for(HashMap<String, String> currentStudent : studentList) {
-            System.out.println(currentStudent.get("firstName");
-        }
-         */
+//        for(HashMap<String, String> currentStudent : studentList) {
+//            System.out.println(currentStudent.get("firstName");
+//        }
 
         // now let's loop through all the students in our ArrayList printing their course:
 //        for(HashMap<String, String> currentStudent : studentList) {
