@@ -48,20 +48,23 @@ public class Main {
         studentList.add(studentThree);
         studentList.add(studentFour);
 
-        System.out.println(studentOne.keySet());
-        System.out.println(studentOne.values());
+//        System.out.println(studentOne.keySet());
+//        System.out.println(studentOne.values());
         // prompt for input
         System.out.println("Enter a search term:");
         String userInput = in.nextLine();
 
-        ArrayList<HashMap<String, String>> searchedStudents = searchUsingInput(userInput);
-        // loop through ArrayList and then loop through each HashMap to print out each key value pair
-        for(HashMap<String, String> currentStudent : searchedStudents) {
-            System.out.println("-------");
-            for(String key : currentStudent.keySet()) {
-                System.out.println(key + ": " + currentStudent.get(key));
+        printStudents(searchUsingInput(userInput));
+
+    }
+
+    public static void printStudents(ArrayList<HashMap<String, String>> students) {
+        for(HashMap<String,String> student : students) {
+            System.out.println("------");
+            for (String key : student.keySet()) {
+                System.out.println(key + ": " + student.get(key));
             }
-            System.out.println("-------");
+            System.out.println("______");
         }
     }
 
@@ -70,7 +73,9 @@ public class Main {
         ArrayList<HashMap<String, String>> students = new ArrayList<>();
 
         for(HashMap<String, String> student : studentList) {
+//            System.out.println(student.values());
             for(String value : student.values()) {
+//                System.out.println(value);
                 if(value.contains(searchInput)) {
                     students.add(student);
                     // searchInput matching 1 value is sufficient to add in student to students
@@ -81,4 +86,6 @@ public class Main {
 
         return students;
     }
+
+
 }
